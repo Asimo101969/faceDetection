@@ -44,7 +44,8 @@ void main() {
 		for (int i = 0; i < faces.size(); i++) {
 			rectangle(img, faces[i].tl(), faces[i].br(),Scalar(30, 144, 255), 2);
 			rectangle(img, Point(0, 0), Point(200, 30),Scalar(135, 206, 250), FILLED);
-			putText(img, to_string(faces.size()) + "Faces Found", Point(7,20), FONT_HERSHEY_COMPLEX_SMALL, 1, Scalar(255, 255, 255), 1, FILLED);
+			putText(img, to_string(faces.size()) + "Faces Found", Point(7, 20), FONT_HERSHEY_COMPLEX_SMALL, 1, Scalar(255, 255, 255), 1, FILLED);
+			putText(img, "Face Id: "+to_string(faces.size()), faces[i].tl(), FONT_HERSHEY_COMPLEX_SMALL, 1, Scalar(255, 255, 255), 1, FILLED);
 		}
 		imshow("Frame", img);
 		waitKey(1);
